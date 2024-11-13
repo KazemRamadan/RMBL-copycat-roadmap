@@ -52,10 +52,10 @@ export default async function Page() {
       alt="COPYCAT PIC"/>
         </div>
         <h1 className="text-lg sm:text-2xl font-bold mb-2">
-          Help us prioritize our roadmap
+          RMBL-CopyCat roadmap
         </h1>
         <h2 className="text-md sm:text-xl mx-4">
-          Create or vote up features you want to see in our product.
+          Create or vote up features by clicking on the 🙋‍♂️ emoji for the ones you want to see in our product.
         </h2>
         <div className="flex flex-wrap items-center justify-around max-w-4xl my-8 sm:w-full bg-white rounded-md shadow-xl h-full border border-gray-100">
           <FeatureForm features={features} />
