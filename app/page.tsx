@@ -2,32 +2,12 @@ import { kv } from "@vercel/kv";
 import { saveEmail } from "./actions";
 import FeatureForm from "./form";
 import { Feature } from "./types";
+import Image from 'next/image'
 
 export let metadata = {
-  title: "Next.js and Redis Example",
-  description: "Feature roadmap example with Next.js with Redis.",
+  title: "RMBL CopyCat Roadmap",
+  description: "Feature roadmap...",
 };
-
-function VercelLogo(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      aria-label="Vercel Logo"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 19"
-      {...props}
-    >
-      <path
-        clipRule="evenodd"
-        d="M12.04 2L2.082 18H22L12.04 2z"
-        fill="#000"
-        fillRule="evenodd"
-        stroke="#000"
-        strokeWidth="1.5"
-      />
-    </svg>
-  );
-}
 
 async function getFeatures() {
   try {
@@ -65,7 +45,11 @@ export default async function Page() {
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <main className="flex flex-col items-center justify-center flex-1 px-4 sm:px-20 text-center">
         <div className="flex justify-center items-center bg-black rounded-full w-16 sm:w-24 h-16 sm:h-24 my-8">
-          <VercelLogo className="h-8 sm:h-16 invert p-3 mb-1" />
+          <Image
+      src="/logo-color.png"
+      width={500}
+      height={500}
+      alt="COPYCAT PIC"/>
         </div>
         <h1 className="text-lg sm:text-2xl font-bold mb-2">
           Help us prioritize our roadmap
@@ -100,21 +84,6 @@ export default async function Page() {
               </button>
             </form>
             <div className="flex flex-col sm:flex-row justify-between items-center">
-              <p className="flex items-center my-8 w-full justify-center sm:justify-start">
-                Powered by
-                <VercelLogo className="h-5 mx-2" />
-              </p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex rounded focus:outline-none focus:ring focus:ring-blue-300 mb-4 sm:mb-0 min-w-max"
-                href={`https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-redis&project-name=redis-roadmap&repository-name=redis-roadmap&demo-title=Redis%20Roadmap&demo-description=Create%20and%20upvote%20features%20for%20your%20product.&demo-url=https%3A%2F%2Froadmap-redis.vercel.app%2F&stores=%5B%7B"type"%3A"kv"%7D%5D&`}
-              >
-                <img
-                  src="https://vercel.com/button"
-                  alt="Vercel Deploy Button"
-                />
-              </a>
             </div>
           </div>
         </div>

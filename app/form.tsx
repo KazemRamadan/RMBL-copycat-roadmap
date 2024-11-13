@@ -29,8 +29,8 @@ function Item({
 
   return (
     <form
-      action={upvoteWithId}
-      onSubmit={(event) => {
+    action={upvoteWithId}
+    onSubmit={(event) => {
         event.preventDefault();
 
         startTransition(async () => {
@@ -60,7 +60,7 @@ function Item({
         disabled={isReleased || hasVoted || pending}
         type="submit"
       >
-        {isReleased ? "✅" : "👍"}
+        {isReleased ? "✅" : "🔼"}
       </button>
       <h3 className="text font-semibold w-full text-left">{feature.title}</h3>
       <div className="bg-gray-200 text-gray-700 text-sm rounded-xl px-2 ml-2">
